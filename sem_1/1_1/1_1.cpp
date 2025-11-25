@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
-main(){
-    float a, b; 
-    cin >> a >> b; 
-    if(b == 0){
-        cout << "Ne nado!!!" << endl; 
+int main(){
+    int a, b, c, max; 
+    cin >> a >> b >> c; 
+    if (a >= b){
+        max = a;
     }
-    else{ 
-        cout << a/b << endl;
+    else{
+        max = b;
     }
+    if (c > max){
+        max = c;
+    }
+    cout << max << endl;
 }
