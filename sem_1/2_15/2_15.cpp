@@ -1,35 +1,22 @@
-#include <iostream>
-#include <cmath>
-int main()
-{
-	int N, S;
-	bool t = 0;
-	std::cout << "enter N: ";
-	std::cin >> N;
-	std::cout << "enter S: ";
-	std::cin >> S;
-	for (int i = 1; i < 100; i++)
-	{
-		int f = pow(10, i);
-		int x = (N % f) - N % (f / 10);
-		x /= f / 10;
-		if (x == 0)
-		{
-			break;
-		}
-		if (x == S)
-		{
-			t = 1;
-			break;
-		}
-	}
-	if (t == 1)
-	{
-		std::cout << "TRUE, S in N";
-	}
-	else
-	{
-		std::cout << "FALSE, S not in N";
-	}
-	return 0;
-}
+#include <iostream> 
+using namespace std; 
+int main(){
+    int N, S, pr; 
+    bool flag = false;
+    cin >> N >> S; 
+    while (N > 0){
+        pr = N%10;  
+        if(pr == S){
+            flag = true;
+            break;
+        }
+        N = N/10; 
+    }
+    if (flag == false){
+        cout << "Нет, число S не входит в N" << endl; 
+    }
+    else{
+        cout << "Да, число S входит в N" << endl;
+    }
+    return 0;
+} 
