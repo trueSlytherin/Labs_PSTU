@@ -1,13 +1,13 @@
-#include <iostream>
-int main()
-{
-	int N, r = 0;
-	std::cin >> N;
-	while (N > 0)
-	{
-		r = r * 10 + N % 10;
-		N /= 10;
-	}
-	std::cout << r;
-	return 0;
+#include <iostream> 
+using namespace std; 
+int main(){
+    int N, tmp, S; 
+    cin >> N; 
+    while(N > 0)
+    {
+        tmp = N%10; 
+        S =  (S*10) + tmp;
+        N /= 10;
+    }
+    cout << S << endl;
 }
