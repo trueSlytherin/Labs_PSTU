@@ -1,19 +1,16 @@
-#include <iostream>
+#include <iostream> 
 #include <cmath>
-int main()
-{
-	int N, fact = 1, x;
-	float sum = 1;
-	std::cout << "enter x: ";
-	std::cin >> x;
-	std::cout << "enter N: ";
-	std::cin >> N;
-	for (int i = 1; i <= N; i++)
-	{
-		fact *= i;
-		float m = pow(x, i) / fact;
-		sum += m;
-	}
-	std::cout << sum;
-	return 0;
+using namespace std; 
+int main(){
+    int N; 
+    float x, factorial, sum;
+    cin >> N >> x; 
+    sum = 1 + x; 
+    factorial = 1;
+
+    for (int i = 2; i <= N; i++){
+        factorial *= i; 
+        sum += (pow(x, i) / factorial); 
+    }
+    cout << sum << endl; 
 }
