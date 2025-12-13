@@ -1,23 +1,28 @@
-﻿
 #include <iostream>
 #include <cmath>
-using namespace std;
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    int n, number=0;
-    double nmax = -1;
-    bool flag = false;
-    cin >> n;
-    for (float i = 1; i <= n; i++) {
-        double a = sin(n + (i / n));
-        if (nmax < a) {
-            nmax = a;
-        }
-    }
-    for (float i = 1; i <= n; i++) {
-        double a = sin(n + (i / n));
-        if (abs(nmax - a) < 0.000001) { number += 1; }
-    }
-    cout <<endl<< number<<nmax;
+	int N, count = 0;
+	float max = 0;
+	std::cout << "enter N: ";
+	std::cin >> N;
+	for (int i = 1; i <= N; i++)
+	{
+		float a = sin(i + i / N);
+		if (a > max)
+		{
+			max = a;
+		}
+	}
+	std::cout << "max = " << max << std::endl;
+	for (int i = 1; i <= N; i++)
+	{
+		float a = sin(i + i / N);
+		if (a == max)
+		{
+			count++;
+		}
+	}
+	std::cout << count;
+	return 0;
 }
