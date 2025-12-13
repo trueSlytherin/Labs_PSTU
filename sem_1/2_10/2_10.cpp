@@ -1,15 +1,17 @@
-int n, tmp, max;
-
-cout << "Введите длину послед:" << endl;
-cin >> n;
-
-cout << "Введите первое число:" << endl;
-cin >> n;
-for (int i = 2; i <= n; i++)
-{
-	cout << "Введите след число:" << endl;
-	cin >> tmp;
-	if (tmo > max) { max = tmp; }
+#include <iostream>
+using namespace std;
+int main(){
+    int N, firstmax, number; 
+    cin >> N;
+    if (N <= 0) {
+        cout << "Последовательность пустая" << endl; 
+        return 0;
+    } 
+    cin >> firstmax; 
+    for(int i = 2; i <= N; i++){
+        cin >> number; 
+        if(number > firstmax) { firstmax = number; }
+    }
+    cout << "Первый максимальный элемент: " << firstmax << endl; 
+    return 0;
 }
-cout <<"максимальный элемент: " << max << endl;
-
