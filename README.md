@@ -39,7 +39,7 @@
 
 
 # 2 семестр
-| Номер задачи | Статус | Ссылка на исходный код | Ссылка на схему |
+| Номер задачи | Статус | Ссылка на исходный код | 
 | --- | --- | --- |
 | 1.1 | 🟢 (25.11.2025) | 🟢 |
 | 1.2 | 🟢 (25.11.2025) | 🟢 |
@@ -53,24 +53,24 @@
 | 2.7 | 🟢 (25.11.2025) | 🟢 |
 | 2.8 | 🟢 (25.11.2025) | 🟢 
 # 2 семестр
-| Наименование | Статус | Ссылка на исходный код | Ссылка на схему |
+| Наименование | Статус | Ссылка на исходный код |
 | --- | --- | --- |
-| Сортировка пузырьком | 🟢/🔴 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.1/3.1.cpp) |  нет  |
-| Сортировка выбором   | 🟢/🔴 |     |     |
-| Сортировка вставками | 🟢/🔴 |     |     |
-| 3.1 |  🟢/🔴   |     |     |
-| 3.2 |  🟢/🔴   |     |     |
-| 3.3 |  🟢/🔴   |     |     |
-| 3.4 |  🟢/🔴   |     |     |
-| 3.5 |  🟢/🔴   |     |     |
-| 3.6 |  🟢/🔴   |     |     |
-| 3.7 |  🟢/🔴   |     |     |
-| 3.8 |  🟢/🔴   |     |     |
-| 3.9 |  🟢/🔴   |     |     |
-| 3.10 |  🟢/🔴  |     |     |
-| 3.11 |  🟢/🔴  |     |     |
-| 3.12 |  🟢/🔴  |     |     |
-| 3.13 |  🟢/🔴  |     |     |
+| Сортировка пузырьком | 🟢/🔴 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/bubble%20sort/bubble%20sort.cpp)   |
+| Сортировка выбором   | 🟢/🔴 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/insertion%20sort/insertion%20sort.cpp)   |
+| Сортировка вставками | 🟢/🔴 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/selection%20sort/selection%20sort.cpp)   |
+| 3.1 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.1/3.1.cpp)   |
+| 3.2 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.2/3.2.cpp)   |
+| 3.3 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.3/3.3.cpp)   |
+| 3.4 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.4/3.4.cpp)   |
+| 3.5 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.5/3.5.cpp)   |
+| 3.6 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.6/3.6.cpp)   |
+| 3.7 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.7/3.7.cpp)   |
+| 3.8 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.8/3.8.cpp)   |
+| 3.9 |  🟢/🔴   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.9/3.9.cpp)   |
+| 3.10 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.10/3.10.cpp)   |
+| 3.11 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.11/3.11.cpp)   |
+| 3.12 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.12/3.12.cpp)   |
+| 3.13 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.13/3.13.cpp)   |
 
 
 
