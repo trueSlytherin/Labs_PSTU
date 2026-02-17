@@ -56,6 +56,8 @@
 | 3.11 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.11/3.11.cpp)   |   |
 | 3.12 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.12/3.12.cpp)   |   |
 | 3.13 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.13/3.13.cpp)   |   |
+| fibonachi |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/fibonachi/fib.cpp)   |   |
+| hanoi tower |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/hanoi%20tower/hanoi.cpp)   |   |
 | lab 4 v6 |  🟢/🔴  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/lab%204%20v6/lab%204%20v6.cpp)   |   |
 
 
