@@ -1,15 +1,10 @@
 #include <iostream>
-
 using namespace std;
-
 int main()
 {
     const int n = 6;
-
     int arr[n] = { 5, 2, 1, 3, 5, 7 };
-
     bool sorted = true;
-
     for (int i = 1; i < n; i++)
     {
         if (arr[i] < arr[i - 1])
@@ -18,8 +13,7 @@ int main()
             break; // раннее прерывание
         }
     }
-
-    if (sorted)
+    if (sorted == true)
     {
         cout << "Массив отсортирован" << endl;
     }
@@ -27,6 +21,5 @@ int main()
     {
         cout << "Массив не упорядочен по возрастанию" << endl;
     }
-
     return 0;
 }
