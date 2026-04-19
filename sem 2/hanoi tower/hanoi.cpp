@@ -1,16 +1,21 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
-
-void hanoi(int n, int start, int point, int temp) {
-	if (n <= 0) return;
-	hanoi(n - 1, start, temp, point);
-	cout << start << " => " << point << endl;
-	hanoi(n - 1, temp, point, start);
+void hanoy(int n, char start, char point, char t){
+    if (n==0){cout<<"Переместить 1 диск с "<<start<<" на "<<point<<endl;}
+    else {
+        hanoy(n-1, start, point, t);
+        cout<<"Переместить "<<n<<" диск с "<<start<<" на "<<point<<endl;
+        hanoy(n-1, t, point, start);
+    }
 }
 
 int main() {
-	int n;
-	cin >> n;
-	hanoi(n, 1, 3, 2);
-	return 0;
+    int n;
+    cin>>n;
+    if (n<=0){
+        cout<<"пупупу какая-то заLупа"<<endl;
+        return 1;
+    }
+    hanoy(n,'A','B','C');
+    return 0;
 }
