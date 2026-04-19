@@ -2,24 +2,25 @@
 using namespace std;
 int main()
 {
-    const int N = 11;
-    int max;
-    int count = 1;
-    int a[N] = { 1, 45, 67, 34, 67, 89, 100, 45, 100, 4, 100 };
-    max = a[0];
-    cout << a[0] << " ";
+    const int N = 6;
+    int a[N] = { 1321, 432, 133, 1, 31, 5 };
+    bool sorted = true;
     for (int i = 1; i < N; i++)
     {
-        cout << a[i] << " ";
-        if (a[i] > max)
+        if (a[i] < a[i-1])
         {
-            max = a[i];
-            count = 1;
-        }  
-        else if (a[i] == max) { count++; }
-    }  
-    cout << endl;
-    cout << "Max: " << max << endl;
-    cout << "Количество элементов с этим значением: " << count << endl;
+            sorted = false;
+            break; 
+        }
+    }
+    
+    if (sorted == true)
+    { 
+        cout << "massive is cool" << endl; 
+    }
+    else 
+    { 
+        cout << "massive isnt cool" << endl; 
+    }
     return 0;
 }
