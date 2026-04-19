@@ -2,24 +2,25 @@
 using namespace std;
 int main()
 {
-    const int n = 6;
-    int arr[n] = { 5, 2, 1, 3, 5, 7 };
+    const int N = 6;
+    int a[N] = { 1, 5, 3, 2, 10, 6 };
     bool sorted = true;
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < N; i++)
     {
-        if (arr[i] < arr[i - 1])
+        if (a[i] < a[i-1])
         {
             sorted = false;
-            break; // раннее прерывание
+            break; 
         }
     }
+    
     if (sorted == true)
-    {
-        cout << "Массив отсортирован" << endl;
+    { 
+        cout << "massive is cool" << endl; 
     }
-    else
-    {
-        cout << "Массив не упорядочен по возрастанию" << endl;
+    else 
+    { 
+        cout << "massive isnt cool" << endl; 
     }
     return 0;
 }
