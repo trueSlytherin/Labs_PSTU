@@ -1,24 +1,25 @@
-#include <iostream>
-using namespace std;
-
-int main() {
-    const int n = 10;
-    int arr[n] = { 263, 1432, 5, 62, 72, 96, 1346, 5367, 6, 1 };
-
-    int max = arr[0];
-    int min = arr[0];
-
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-        else if (arr[i] < min) {
-            min = arr[i];
-        }
+#include <iostream> 
+#include <cstdlib>
+#include <ctime>
+using namespace std; 
+int main(){
+    srand(time(0));
+    int range_min = -1000;
+    int range_max = 1000; 
+    int N; 
+    int maxarr = -1000; 
+    int minarr = 1000;  
+    cin >> N;
+    int a[N];
+    for (int i = 0; i < N; i++)
+    {
+        a[i] = ((double)rand() / RAND_MAX) * (range_max - range_min) + range_min;
+        cout << a[i] << " ";
+    }   
+    cout << endl;
+    for(int i =0; i < N; i++){
+        if (a[i] > maxarr){ maxarr = a[i];}
+        else if (a[i] < minarr) {minarr = a[i];}
     }
-
-    cout << max << endl;
-    cout << min << endl;
-
-    return 0;
+    cout << "max = " << maxarr << "; min = " << minarr << endl;
 }
