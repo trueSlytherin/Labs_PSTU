@@ -2,25 +2,23 @@
 using namespace std;
 
 int main() {
-    const int n = 3;
-    int k = 1;
-
-    int arr[n][n] = { {1, 1, 1},{2, 1, 1},{1, 2, 1} };
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (i == j + k) {
-                arr[i][j] = 0;
-            }
+	const int n=3;
+	int a[n][n]={ {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    for (int i=0; i<n; i++){
+        for (int j=0; j<n; j++){
+            cout<<a[i][j]<<" ";
         }
+        cout<<endl;
     }
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << arr[i][j] << " ";
+    cout<<endl;
+    for (int i=0; i<n; i++){a[i][n-1-i]=0;}
+    for (int i=0; i<n; i++){
+        for (int j=0; j<n; j++){
+            cout<<a[i][j]<<" ";
         }
-        cout << endl;
+        cout<<endl;
     }
-
+    cout<<endl;
     return 0;
+}
 }
