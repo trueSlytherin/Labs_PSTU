@@ -1,19 +1,23 @@
-#include <iostream>
-using namespace std;
+#include <iostream> 
+#include <cstdlib>
+#include <ctime>
+using namespace std; 
+int main(){
+    srand(time(0));
+    int range_min = -1000;
+    int range_max = 1000; 
+    int N, maxarr = -1000; 
+    cin >> N; 
+    int a[N]; 
+    for (int i = 0; i < N; i++)
+    {
+        a[i] = ((double)rand() / RAND_MAX) * (range_max - range_min) + range_min;
+        cout << a[i] << " ";
+    }   
+    cout << endl; 
 
-int main() {
-    const int n = 10;
-    int arr[n] = { 12, 967, 53, 10, 62, 63, 56, 919, 1, 158 };
-
-    int max = arr[0];
-
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+    for(int i = 0; i < N; i++){
+        if (a[i] > maxarr){ maxarr = a[i]; } 
     }
-
-    cout << max << endl;
-
-    return 0;
+    cout << maxarr << endl; 
 }
