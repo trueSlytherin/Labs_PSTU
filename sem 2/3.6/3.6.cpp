@@ -1,32 +1,31 @@
-#include <iostream>
-using namespace std;
+#include <iostream> 
+#include <cstdlib>
+#include <ctime>
+using namespace std; 
+int main(){
+    srand(time(0));
+    int range_min = -1000;
+    int range_max = 1000; 
+    int N, k; 
+    cin >> N >> k; 
+    int a[N], b[N];
+    for (int i = 0; i < N; i++)
+    {
+        a[i] = ((double)rand() / RAND_MAX) * (range_max - range_min) + range_min;
+        cout << a[i] << " ";
+    }   
+    cout << endl; 
 
-int main() {
-    const int n = 10;
-    const int k = 2;
+    if ( k > N ){ k = k%N;} 
 
-    int arr[n] = { 1, 2, 3, 6, 5, 6, 9, 12, 10, 7 };
-    int tmp[k];
+    for (int i = 0; i < N; i++){
+        int K = i - k; 
+        if (K < 0) {K+=N;}
+        b[K] = a[i]; 
+    }    
 
-    // сохраняем первые k элементов
-    for (int i = 0; i < k; i++) {
-        tmp[i] = arr[i];
+    for (int i = 0; i < N; i++){
+        a[i] = b[i]; 
+        cout << a[i] << " ";
     }
-
-    // сдвигаем массив влево на k
-    for (int i = 0; i < n - k; i++) {
-        arr[i] = arr[i + k];
-    }
-
-    // возвращаем сохранённые элементы в конец
-    for (int i = 0; i < k; i++) {
-        arr[n - k + i] = tmp[i];
-    }
-
-    // вывод
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-
-    return 0;
 }
