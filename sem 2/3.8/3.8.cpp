@@ -1,32 +1,26 @@
-#include <iostream> 
-#include <cstdlib>
-#include <ctime>
-using namespace std; 
-int main(){
-    srand(time(0));
-    int range_min = -100;
-    int range_max = 100; 
-    int N; 
-    cin>> N; 
-    int j; 
-    int a[N];
-    int b[2*N];
+#include <iostream>
+using namespace std;
 
-    for (int i = 0; i < N; i++){
-            a[i] = ((double)rand() / RAND_MAX) * (range_max - range_min) + range_min;  
-            cout << a[i] << " ";
-        }
-    cout << endl;
-
-    for (int i = 0; i < N; i++){
-        if (a[i]%2 ==0){
-            b[j] = -1; 
-            j++;
-        }
-        b[j] = a[i];
-        j++;
-    }
-    for (int i = 0; i < j; i++){
-        cout << b[i] << " "; 
-    }
+int main() {
+	const int n=7;
+	int a[n]={53,32,421,3126,41,12,23};
+	for (int i=0; i<n; i++){
+	    cout<<a[i]<<" ";
+	}
+	cout<<endl;
+	int tmp[2*n];
+	int j=0;
+	for (int i=0; i<n; i++){
+	    if (a[i]%2==0){
+	        tmp[j]=-1;
+	        j+=1;
+	    }
+	    tmp[j]=a[i];
+	    j+=1;
+	}
+	for (int i=0; i<j; i++){
+	    cout<<tmp[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
 }
