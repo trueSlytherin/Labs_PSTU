@@ -4,7 +4,7 @@ int main()
 {
     const int N = 4;
     int tmp;
-    int a[N] = { 34, 21, 55, 100 };
+    int a[N] = { 11, 21, 42, 412 };
     for (int i = 0; i < N; i++)
     {
         cout << a[i] << " ";
