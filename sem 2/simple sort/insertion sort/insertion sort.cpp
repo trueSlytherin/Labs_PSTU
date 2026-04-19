@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	const int n=7;
 	int key;
-	int a[n]={5,2,4,6,0,1,3};
+	int a[n]={2,3,6,8,4,1,9};
 	for (int i=0; i<n; i++){
 	    cout<<a[i]<<" ";
 	}
