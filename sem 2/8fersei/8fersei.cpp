@@ -1,69 +1,44 @@
 #include <iostream>
-
-const int size = 8;
-int board[size][size];
-int count = 0;
-
-// вывод доски
-void show() { 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            if (board[i][j]) { 
-                std::cout << "# ";
-            }
-            else {
-                std::cout << ". ";
-            }
+using namespace std;
+const int size_arr=8;
+int a[size_arr][size_arr]{};
+int tryCount=0;
+void show(){
+    for (int i=0; i<size_arr; i++){
+        for (int j=0; j<size_arr; j++){
+            cout<<(a[i][j] ? "! " : "# ");
         }
-        std::cout << std::endl;
+        cout<<endl;
     }
 }
-
-// бьется ли ячейка
-int check(int i, int j) {
-    // проверка столбца
-    for (int c = 0; c < i; c++) {
-        if (board[c][j]) {
-            return 0;
-        }
+bool test(int row, int col){
+    for (int i=0; i<row;i++){
+        if (a[i][col]){return false;}
     }
-
-    // проверка диагонали влево вверх
-    for (int c = 1; c <= i && j - c >= 0; c++) {
-        if (board[i - c][j - c]) {
-            return 0;
-        }
+    for (int i=1; row-i>=0 && col-i>=0; i++){
+        if (a[row-i][col-i]){return false;}
     }
-
-    // проверка диагонали вправо вверх
-    for (int c = 1; c <= i && j + c < size; c++) {
-        if (board[i - c][j + c]) {
-            return 0;
-        }
+    for (int i=1; row-i>=0 && col+i<size_arr;i++){
+        if (a[row-i][col+i]){return false;}
     }
-    return 1;
+    return true;
 }
-
-// i - номер строки
-void set(int i) {
-    if (i == size) {
-        std::cout << "Variation " << ++count << ":" << std::endl;
+void game(int row){
+    if (row==size_arr){
+        cout<<"Try №"<<++tryCount<<endl<<endl;
         show();
-        std::cout << std::endl << std::endl;
+        cout<<endl;
         return;
     }
-    for (int ii = 0; ii < size; ii++) {
-        // проверка строки
-        if (check(i, ii)) {
-            board[i][ii] = 1;
-            set(i + 1);
-            board[i][ii] = 0; // обнуление доски
+    for (int col=0; col<size_arr; col++){
+        if (test(row, col)){
+            a[row][col]=1;
+            game(row+1);
+            a[row][col]=0;
         }
-        // else - откат к предыдущей строке со смещением ферзя
     }
 }
-
-int main() {
-    set(0);
+int main(){
+    game(0);
     return 0;
-} 
+}
