@@ -1,33 +1,26 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    const int n = 7;
-    int key;
-    int arr[n] = { 9, 3, 5, 6, 11, 21, 1 };
-    // вывод исходного массива
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    // сортировка вставками
-    for (int i = 1; i < n; i++)
-    {
-        key = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = key;
-    }
-    // вывод отсортированного массива
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    return 0;
+
+int main() {
+	const int n=7;
+	int tmp, min_index;
+	int a[n]={4,2,3,5,8,1,7};
+	for (int i=0; i<n; i++){
+	    cout<<a[i]<<" ";
+	}
+	cout<<endl;
+	for (int i=0; i<n-1; i++){
+	    min_index = i;
+	    for (int j=i+1; j<n; j++){
+	        if (a[j]<a[min_index]){min_index=j;}
+	    }
+	    tmp=a[min_index];
+	    a[min_index]==a[i];
+	    a[i]=tmp;
+	}
+	for (int i=0; i<n; i++){
+	    cout<<a[i]<<endl;
+	}
+	cout<<endl;
+	return 0;
 }
