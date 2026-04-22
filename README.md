@@ -61,6 +61,10 @@
 | lab 3 v6 |  🟢/🟢  |  [код]   |   |
 | lab 4 v6 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/lab%204%20v6/lab%204%20v6.cpp)   |   |
 | lab 5 v6 |  🟢/🟢  |  [код]   |   |
+| lab 6 v6 |  🟢/🟢  |  [код]   |   |
+| lab 7 v6 |  🟢/🟢  |  [код]   |   |
+| lab 8 v6 |  🟢/🟢  |  [код]   |   |
+| lab 9 v6 |  🟢/🟢  |  [код]   |   |
 
 
 
