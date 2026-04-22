@@ -6,23 +6,50 @@ using namespace std;
 struct Node {
     int data;
     Node* next;
+    Node* prev;
 };
 
 struct List {
     Node* head;
+    Node* tail;
     unsigned int size;
 };
 
 void init(List* list) {
     list->head = nullptr;
+    list->tail = nullptr;
     list->size = 0;
 }
 
 void pushFront(List* list, int value) {
     Node* newNode = new Node;
     newNode->data = value;
+    newNode->prev = nullptr;
     newNode->next = list->head;
+
+    if (list->head != nullptr) {
+        list->head->prev = newNode;
+    } else {
+        list->tail = newNode;
+    }
+
     list->head = newNode;
+    list->size++;
+}
+
+void pushBack(List* list, int value) {
+    Node* newNode = new Node;
+    newNode->data = value;
+    newNode->next = nullptr;
+    newNode->prev = list->tail;
+
+    if (list->tail != nullptr) {
+        list->tail->next = newNode;
+    } else {
+        list->head = newNode;
+    }
+
+    list->tail = newNode;
     list->size++;
 }
 
@@ -47,22 +74,24 @@ void deleteByNumber(List* list, unsigned int num) {
         return;
     }
 
-    if (num == 1) {
-        Node* tmp = list->head;
-        list->head = list->head->next;
-        delete tmp;
-        list->size--;
-        return;
+    Node* cur = list->head;
+    for (unsigned int i = 1; i < num; i++) {
+        cur = cur->next;
     }
 
-    Node* prev = list->head;
-    for (unsigned int i = 1; i < num - 1; i++) {
-        prev = prev->next;
+    if (cur->prev != nullptr) {
+        cur->prev->next = cur->next;
+    } else {
+        list->head = cur->next;
     }
 
-    Node* del = prev->next;
-    prev->next = del->next;
-    delete del;
+    if (cur->next != nullptr) {
+        cur->next->prev = cur->prev;
+    } else {
+        list->tail = cur->prev;
+    }
+
+    delete cur;
     list->size--;
 }
 
@@ -88,6 +117,7 @@ void clearList(List* list) {
     }
 
     list->head = nullptr;
+    list->tail = nullptr;
     list->size = 0;
 }
 
@@ -102,20 +132,7 @@ void restoreFromFile(List* list, const char* filename) {
 
     int value;
     while (file >> value) {
-        Node* newNode = new Node;
-        newNode->data = value;
-        newNode->next = nullptr;
-
-        if (list->head == nullptr) {
-            list->head = newNode;
-        } else {
-            Node* p = list->head;
-            while (p->next != nullptr) {
-                p = p->next;
-            }
-            p->next = newNode;
-        }
-        list->size++;
+        pushBack(list, value);
     }
 
     file.close();
@@ -125,13 +142,13 @@ int main() {
     List list;
     init(&list);
 
-    pushFront(&list, 50);
-    pushFront(&list, 40);
-    pushFront(&list, 30);
-    pushFront(&list, 20);
-    pushFront(&list, 10);
+    pushBack(&list, 10);
+    pushBack(&list, 20);
+    pushBack(&list, 30);
+    pushBack(&list, 40);
+    pushBack(&list, 50);
 
-    cout << "Исходный односвязный список:" << endl;
+    cout << "Исходный двусвязный список:" << endl;
     printList(&list);
 
     unsigned int num;
@@ -150,13 +167,13 @@ int main() {
     cout << "\nПосле добавления в начало:" << endl;
     printList(&list);
 
-    writeToFile(&list, "list1.txt");
+    writeToFile(&list, "list2.txt");
     clearList(&list);
 
     cout << "\nПосле уничтожения:" << endl;
     printList(&list);
 
-    restoreFromFile(&list, "list1.txt");
+    restoreFromFile(&list, "list2.txt");
     cout << "\nПосле восстановления из файла:" << endl;
     printList(&list);
 
