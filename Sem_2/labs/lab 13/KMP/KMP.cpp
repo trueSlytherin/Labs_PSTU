@@ -87,7 +87,7 @@ void printArr(int arr[], int n) {
 
 int main() {
     string text = "ABABDABACDABABCABAB";
-    string pattern = "ABAB";
+    string pattern = "BABC";
     int count = 0;
 
     int* matches = KMPSearchAll(text, pattern, count);
