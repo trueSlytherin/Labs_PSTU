@@ -50,9 +50,9 @@ void insertionSort(int arr[], int n) {
 int main() {
     SetConsoleOutputCP(CP_UTF8);
 
-    int arr[] = { 42, 53, 14, 66, 3, 234, 9, 2, 47 };
+    int arr[] = { 42, 3, 56, 22, 77, 11, 1, 8, 43, 84 };
     int n = sizeof(arr) / sizeof(arr[0]);
-    int x = 53;
+    int x = 43;
 
     insertionSort(arr, n);
 
