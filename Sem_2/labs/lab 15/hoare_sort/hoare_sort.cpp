@@ -45,7 +45,7 @@ void printArray(int arr[], int n) {
 int main() {
     SetConsoleOutputCP(CP_UTF8);
 
-    int arr[] = { 5, 2, 4, 6, 1, 3, 9, 7, 8, 0, 12, 34 };
+    int arr[] = { 6, 2, 3, 5, 1, 4, 12, 8, 14, 0, 9, 14 };
     int n = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Исходный массив: ";
