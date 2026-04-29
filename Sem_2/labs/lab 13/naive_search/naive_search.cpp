@@ -55,7 +55,7 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
 
     string text = "AABAACAADAABAAABAA";
-    string pattern = "AABA";
+    string pattern = "BAA";
     int count = 0;
 
     int* res = naiveSearch(text, pattern, count);
