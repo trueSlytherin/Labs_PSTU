@@ -37,38 +37,37 @@
 | eq_half | 🟢 (23.12.2025) | 🟢 |
 | eq_newton | 🟢 (23.12.2025) | 🟢 |
 
-# 2 семестр
-| Наименование | Статус | Ссылка на исходный код | Ссылка на схему |
-| --- | --- | --- | --- |
-| Сортировка пузырьком | 🟢/🟢 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/bubble%20sort/bubble%20sort.cpp)   |   |
-| Сортировка выбором   | 🟢/🟢 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/insertion%20sort/insertion%20sort.cpp)   |   |
-| Сортировка вставками | 🟢/🟢 | [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/simple%20sort/selection%20sort/selection%20sort.cpp)   |   |
-| 3.1 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.1/3.1.cpp)   |   |
-| 3.2 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.2/3.2.cpp)   |   |
-| 3.3 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.3/3.3.cpp)   |   |
-| 3.4 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.4/3.4.cpp)   |   |
-| 3.5 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.5/3.5.cpp)   |   |
-| 3.6 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.6/3.6.cpp)   |   |
-| 3.7 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.7/3.7.cpp)   |   |
-| 3.8 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.8/3.8.cpp)   |   |
-| 3.9 |  🟢/🟢   |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.9/3.9.cpp)   |   |
-| 3.10 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.10/3.10.cpp)   |   |
-| 3.11 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.11/3.11.cpp)   |   |
-| 3.12 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.12/3.12.cpp)   |   |
-| 3.13 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/3.13/3.13.cpp)   |   |
-| fibonachi |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/fibonachi/fib.cpp)   |   |
-| hanoi tower |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/hanoi%20tower/hanoi.cpp)   |   |
-| lab 3 v6 |  🟢/🟢  |  [код]   |   |
-| lab 4 v6 |  🟢/🟢  |  [код](https://github.com/trueSlytherin/Labs_PSTU/blob/main/sem%202/lab%204%20v6/lab%204%20v6.cpp)   |   |
-| lab 5 v6 |  🟢/🟢  |  [код]   |   |
-| lab 6 v6 |  🟢/🟢  |  [код]   |   |
-| lab 7 v6 |  🟢/🟢  |  [код]   |   |
-| lab 8 v6 |  🟢/🟢  |  [код]   |   |
-| lab 9 v6 |  🟢/🟢  |  [код]   |   |
+## 2 семестр
 
+### Лабораторные
 
+| п/п | Описание |Статус: код/схема |Ссылка на папку|
+|---|---|---|---|
+|Lab №1|4-я лабораторная  (6 варинат)|🟢/🟢||
+|Lab №2|5-я лабораторная  (6 вариант)|🟢/🟢||
+|Lab №3|3-я лабораторная  (6 вариант) + НОД + числа Фибоначчи |🟢/🟢||
+|Lab №4|Ханойская башня|🟢/🟢||
+|Lab №5|Задача о 8-ми ферзях|🟢/🟢||
+|Lab №6|Простые сортировки(пузырьком, выбором, вставкой) |🟢/🟢||
+|Lab №7|10-я лабораторная (6 вариант)|🟢/🟢||
+|Lab №8|7.1-я лабораторная (6 варинат)|🟢/🟢||
+|Lab №9|7.2-я лабораторная (6 варинат)|🟢/🟢||
+|Lab №10|6-я лабораторная (6 вариант)|🟢/🟢||
+|Lab №11|9-я лабораторная (6 вариант)|🟢/🟢||
+|Lab №12|8-я лабораторная (6 вариант)|🟢/🟢||
+|Lab №13|11-я лабораторная (6 вариант) на однонаправленные списки|🟢/🟢||
+|Lab №14|11-я лабораторная (6 вариант) на двунаправленные списки|🟢/🟢||
+|Lab №15|11-я лабораторная (6 вариант) на стеки|🟢/🟢||
+|Lab №16|11-я лабораторная (6 вариант) на очереди|🟢/🟢||
+|Lab №17|Простые поиски: линейный, бинарный, интерполяционный|🟢/🟢||
+|Lab №18|Поиски подстроки в строке(наивный, Бойер-Мур, КМП)|🟢/🟢||
+|Lab №19|Быстрая сортировка по Ломуто, сортировки слиянием, подсчётом и блочная|🟢/🟢||
+|Lab №20|Быстрая сортировка по Хоару и сортировка Шелла|🟢/🟢||
 
-
+### static_arrays
+| п/п | Описание |Статус: код/схема |Ссылка на папку|
+|---|---|---|---|
+|static_arrays|Работа со статичныи массивами|🟢/🟢||
 
 
 
