@@ -5,91 +5,86 @@
 
 using namespace std;
 
-struct Data {
-    string name;
-    long long passport;
+struct Record {
+    string fio;
     string address;
+    long long phone;
 };
 
 struct Node {
-    Data data;
+    Record data;
     Node* next;
 };
 
-class HashTable {
+class HashTableChain {
 private:
     int size;
     Node** table;
 
 public:
-    HashTable(int s) {
+    HashTableChain(int s) {
         size = s;
         table = new Node * [size];
-
         for (int i = 0; i < size; i++) {
             table[i] = nullptr;
         }
     }
 
-    ~HashTable() {
+    ~HashTableChain() {
         clear();
         delete[] table;
     }
 
-    int hashFunction(const string& key) {
-        int sum = 0;
-        for (char c : key) {
-            sum += static_cast<unsigned char>(c);
-        }
-        return sum % size;
+    int hashFunction(long long key) {
+        return key % size;
     }
 
-    void insert(const Data& value) {
-        int index = hashFunction(value.name);
+    void insert(const Record& rec) {
+        int index = hashFunction(rec.phone);
 
         Node* current = table[index];
         while (current != nullptr) {
-            if (current->data.name == value.name) {
-                current->data = value;
-                cout << "Данные обновлены для: " << value.name << endl;
+            if (current->data.phone == rec.phone) {
+                current->data = rec;
+                cout << "Данные обновлены.\n";
                 return;
             }
             current = current->next;
         }
 
         Node* newNode = new Node;
-        newNode->data = value;
+        newNode->data = rec;
         newNode->next = table[index];
         table[index] = newNode;
 
-        cout << "Добавлен: " << value.name << endl;
+        cout << "Запись добавлена.\n";
     }
 
-    void search(const string& key) {
+    void search(long long key) {
         int index = hashFunction(key);
         Node* current = table[index];
 
         while (current != nullptr) {
-            if (current->data.name == key) {
-                cout << "Найден: "
-                    << current->data.name << ", "
-                    << current->data.passport << ", "
-                    << current->data.address << endl;
+            if (current->data.phone == key) {
+                cout << "Найдена запись:\n";
+                cout << "ФИО: " << current->data.fio << endl;
+                cout << "Адрес: " << current->data.address << endl;
+                cout << "Телефон: " << current->data.phone << endl;
                 return;
             }
             current = current->next;
         }
 
-        cout << "Элемент с именем " << key << " не найден." << endl;
+        cout << "Запись не найдена.\n";
     }
 
-    void remove(const string& key) {
+    void remove(long long key) {
         int index = hashFunction(key);
         Node* current = table[index];
         Node* prev = nullptr;
 
         while (current != nullptr) {
-            if (current->data.name == key) {
+            if (current->data.phone == key) {
                 if (prev == nullptr) {
                     table[index] = current->next;
                 }
@@ -98,7 +93,7 @@ public:
                 }
 
                 delete current;
-                cout << "Удален: " << key << endl;
+                cout << "Запись удалена.\n";
                 return;
             }
 
@@ -106,31 +101,26 @@ public:
             current = current->next;
         }
 
-        cout << "Элемент с именем " << key << " не найден." << endl;
+        cout << "Запись не найдена.\n";
     }
 
     void print() {
         for (int i = 0; i < size; i++) {
             cout << i << ": ";
-
             Node* current = table[i];
 
             if (current == nullptr) {
                 cout << "пусто";
             }
-            else {
-                while (current != nullptr) {
-                    cout << "["
-                        << current->data.name << ", "
-                        << current->data.passport << ", "
-                        << current->data.address << "]";
 
-                    if (current->next != nullptr) {
-                        cout << " -> ";
-                    }
-
-                    current = current->next;
+            while (current != nullptr) {
+                cout << "[" << current->data.fio << ", "
+                    << current->data.address << ", "
+                    << current->data.phone << "]";
+                if (current->next != nullptr) {
+                    cout << " -> ";
                 }
+                current = current->next;
             }
 
             cout << endl;
@@ -140,13 +130,11 @@ public:
     void clear() {
         for (int i = 0; i < size; i++) {
             Node* current = table[i];
-
             while (current != nullptr) {
                 Node* temp = current;
                 current = current->next;
                 delete temp;
             }
-
             table[i] = nullptr;
         }
     }
@@ -155,13 +143,17 @@ public:
         ifstream file(fileName);
 
         if (!file.is_open()) {
-            cout << "Ошибка открытия файла!" << endl;
+            cout << "Ошибка открытия файла.\n";
             return;
         }
 
-        Data temp;
-        while (file >> temp.name >> temp.passport >> temp.address) {
-            insert(temp);
+        Record rec;
+        while (getline(file, rec.fio, ';')) {
+            getline(file, rec.address, ';');
+            file >> rec.phone;
+            file.ignore();
+
+            insert(rec);
         }
 
         file.close();
@@ -172,21 +164,20 @@ int main() {
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
 
-    HashTable ht(10);
+    HashTableChain ht(10);
 
     ht.loadFromFile("input.txt");
 
-    cout << "\nХэш-таблица после загрузки:\n";
+    cout << "\nХэш-таблица (chain):\n";
     ht.print();
 
-    cout << "\nПоиск элементов:\n";
-    ht.search("Иван");
-    ht.search("Мария");
+    cout << "\nПоиск:\n";
+    ht.search(89004567890);
 
-    cout << "\nУдаление элемента:\n";
-    ht.remove("Петр");
+    cout << "\nУдаление:\n";
+    ht.remove(89004567890);
 
-    cout << "\nХэш-таблица после удаления:\n";
+    cout << "\nПосле удаления:\n";
     ht.print();
 
     return 0;
