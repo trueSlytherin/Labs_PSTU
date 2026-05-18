@@ -63,8 +63,8 @@
 |Lab №18|Поиски подстроки в строке(наивный, Бойер-Мур, КМП)|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%2013)|
 |Lab №19|Быстрая сортировка по Ломуто, сортировки слиянием, подсчётом и блочная|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%2014)|
 |Lab №20|Быстрая сортировка по Хоару и сортировка Шелла|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%2015)|
-|Lab №21|Многофазная и естественная сортировки|🟢/🟢||
-|Lab №22|Хэш-таблица|🟢/🟢||
+|Lab №21|Многофазная и естественная сортировки|🟢/🟠||
+|Lab №22|Хэш-таблица|🟢/🟠||
 
 #### Классы
 | п/п | Описание |Статус: код/схема |Ссылка на папку|
