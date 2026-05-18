@@ -43,7 +43,7 @@
 
 | п/п | Описание |Статус: код/схема |Ссылка на папку|
 |---|---|---|---|
-|Lab №1|4-я лабораторная  (6 варинат)|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%204%20v6)|
+|Lab №1|4-я лабораторная  (6 вариант)|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%204%20v6)|
 |Lab №2|5-я лабораторная  (6 вариант)|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%205%20v6)|
 |Lab №3|3-я лабораторная  (6 вариант) + НОД + числа Фибоначчи |🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/lab%203%20v6)|
 |Lab №4|Ханойская башня|🟢/🟢|[papka](https://github.com/trueSlytherin/Labs_PSTU/tree/4fbc0375b071166fefe1a901a98c6edb57e346b9/Sem_2/labs/hanoi%20tower)|
